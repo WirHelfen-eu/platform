@@ -14,6 +14,7 @@ strapi develop
 ```
 
 ### **Create Admin User:**
+Visit localhost:1337 and follow the steps
 
 ### **Configure**
 - Create a user for the frontend that authenticates against the backend and add it tou tour .env in /app:
