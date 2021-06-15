@@ -2,7 +2,7 @@
 
 # Wirhelfen.eu Platform 2.0
 
-## Backend
+## /api
 ### **Install dependencies:**
 ```
 cd api && npm install
@@ -13,7 +13,7 @@ cd api && npm install
 strapi develop
 ```
 
-## app
+## /app
 ### **Install dependencies:**
 ```
 cd app && npm install
