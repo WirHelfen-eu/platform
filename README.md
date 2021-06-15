@@ -25,12 +25,10 @@ npm run dev
 ```
 
 
-
 # How to contribute?
-1. Choose one ore more issues to work on and create a feature branch
-
-2. Clone the feauture branch
-3. Code
-4. Test your changes
-5. Submit a PR and reference the GitHub Issues the PR resolves
+1. Choose one ore more issues to work on and create a feature branch 🕊️
+2. Clone the feauture branch and follow the README instructions in /app and /api
+3. Code 💻
+4. Test your changes 📝
+5. Submit a PR and reference the GitHub Issues the PR resolves 🙌
 
