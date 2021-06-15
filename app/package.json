@@ -1,0 +1,29 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@fontsource/rubik": "^4.3.0",
+    "@headlessui/react": "^1.2.0",
+    "@heroicons/react": "^1.0.1",
+    "axios": "^0.21.1",
+    "next": "10.2.2",
+    "next-auth": "^3.23.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-select": "^4.3.1",
+    "react-step-wizard": "^5.3.6",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.3.0",
+    "tailwindcss": "^2.1.2"
+  }
+}
