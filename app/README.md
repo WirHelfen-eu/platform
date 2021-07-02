@@ -26,6 +26,17 @@ NEXTAUTH_URL=http://localhost:3000
 DATABASE_URL=sqlite://localhost/:memory
 ```
 
+
+**Configure**
+- Go to https://github.com/settings/developers (You need to be signed in on Github)
+- Click "New OAuth APP"
+- Enter `http://localhost:3000` as "Authorization callback URL" and "Homepage URL" and enter a name of you choice as "Application Name"
+- Click "Register Application"
+- Copy "Client ID" to the Variable `GITHUB_ID` in your `.env` File inside the `app` Directory (if not already done copy the `.env.example` into a new `.env`)
+- Click "Generate a new client secret"
+- Copy the generated Client Secret to the `GITHUB_SECRET` Variable in the same file
+
+
 **Install dependencies**
 ```
 $ npm install
