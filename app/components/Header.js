@@ -9,20 +9,20 @@ import {
 
 export default function Example({ session }) {
     return (
-        <Popover className="relative bg-white">
+        <Popover className="relative bg-white border-b-2 border-gray-100">
             {({ open }) => (
                 <>
                     <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+                        <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
                             <div className="flex justify-start lg:w-0 lg:flex-1">
                                 <Link href="/">
-                                    <a href="#">
-                                        <span className="sr-only">Wirhelfen</span>
+                                    <a href="#" className="flex flex-row items-center">
                                         <img
-                                            className="h-8 w-auto sm:h-10"
-                                            src="./WirHelfen_Logo_Schwarz.png"
+                                            className="h-auto w-6 sm:h-10"
+                                            src="./WirHelfen_Logo.svg"
                                             alt="Wir Helfen Logo"
                                         />
+                                        <h1 className="font-bold text-lg ml-5">Wirhelfen</h1>
                                     </a>
                                 </Link>
                             </div>
@@ -32,18 +32,17 @@ export default function Example({ session }) {
                                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
                                 </Popover.Button>
                             </div>
-                            <Popover.Group as="nav" className="hidden md:flex space-x-10">
+                            <Popover.Group as="nav" className="hidden md:flex space-x-10 items-center">
                                 <Link href="/" >
                                     <a className="block px-3 py-2 rounded-full text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Startseite</a>
                                 </Link>
                                 <Link href="/requests">
                                     <a className="block px-3 py-2 rounded-full text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Hilfsgesuche</a>
                                 </Link>
-                            </Popover.Group>
-                            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                                <div className="divider"></div>
                                 {!session && (
                                     <>
-                                        <button className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-wh-green-600 hover:bg-wh-green-700" onClick={signIn}>sign In</button>
+                                        <button className="block px-3 py-2 rounded-full text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50" onClick={signIn}>Anmelden</button>
                                     </>
                                 )}
                                 {session && (
@@ -53,7 +52,7 @@ export default function Example({ session }) {
                                         <button className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm text-base font-medium bg-grey-600 hover:bg-grey-700" onClick={signOut}>sign Out</button>
                                     </>
                                 )}
-                            </div>
+                            </Popover.Group>
                         </div>
                     </div>
 
@@ -102,22 +101,22 @@ export default function Example({ session }) {
                                         <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
                                             <Link href="/requests" >
                                                 Hilfsgesuche
-                                        </Link>
+                                            </Link>
                                         </a>
                                     </div>
                                     <div>
                                         {!session && (
                                             <>
-                                                <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-wh-green-600 hover:bg-wh-green-700" onClick={signIn}>sign In</button>
+                                                <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-wh-green-600 hover:bg-wh-green-700" onClick={signIn}>Anmelden</button>
                                             </>
                                         )}
                                         {session && (
-                                            <>  
-                                            <div className="mb-5">
-                                                <img className="h-8 w-auto sm:h-10 mr-5 rounded-full inline" src={session.user.image}></img>
-                                                <span className="text-base font-medium text-gray-500"> {session.user.name} </span>
-                                            </div>
-                                                <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-wh-green-600 hover:bg-wh-green-700" onClick={signOut}>sign Out</button>
+                                            <>
+                                                <div className="mb-5">
+                                                    <img className="h-8 w-auto sm:h-10 mr-5 rounded-full inline" src={session.user.image}></img>
+                                                    <span className="text-base font-medium text-gray-500"> {session.user.name} </span>
+                                                </div>
+                                                <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-wh-green-600 hover:bg-wh-green-700" onClick={signOut}>Log out</button>
                                             </>
                                         )}
                                     </div>
